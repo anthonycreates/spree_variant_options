@@ -1,11 +1,10 @@
 <% if @product.has_variants? %>
   <div id="product-variants">
-    <h2><%= t('variants') %></h2>
         
     <% index = 0 %>
     <% @product.grouped_option_values.each do |type, values| %>
       <div id="<%= dom_id(type) %>" class="variant-options index-<%= index %>">
-        <h3 class="variant-option-type"><%= type.presentation %></h3>
+        <h4 class="variant-option-type"><%= type.presentation %></h4>
         <ul class="variant-option-values">
         <% values.each do |value| %>
           <% classes = ["option-value"] %>
